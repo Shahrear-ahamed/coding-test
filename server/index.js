@@ -3,6 +3,9 @@ const app = require("./app");
 const mongoose = require("mongoose");
 const port = process.env.PORT || 5000;
 
+// warning info
+mongoose.set("strictQuery", false);
+
 // connect to the database
 mongoose
   .connect(process.env.MONGODB_URI)
